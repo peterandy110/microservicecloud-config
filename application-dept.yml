@@ -1,0 +1,112 @@
+spring:
+    profiles:
+        active:
+           - dev
+---
+#此为开发环境（dev）的配置
+#和服务器相关，端口号和访问的根路径
+server:
+  port: 8001
+
+#数据源相关配置
+spring:
+  datasource:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud01
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive :20
+    maxWait : 60000
+  #eureka相关配置
+  application:
+    name: microservice-dept-provider
+#mybatis相关
+mybatis:
+  mapper-locations: classpath:mappers/**/*.xml
+  type-aliases-package: com.zq.springcloud.entity
+  configuration:
+    cache-enabled: true
+#eureka相关
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true
+    instance-id: dept-provider-8001
+
+---
+#此为测试环境（test）的配置
+#和服务器相关，端口号和访问的根路径
+server:
+  port: 8001
+
+#数据源相关配置
+spring:
+  datasource:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud02
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive :20
+    maxWait : 60000
+  #eureka相关配置
+  application:
+    name: microservice-dept-provider
+#mybatis相关
+mybatis:
+  mapper-locations: classpath:mappers/**/*.xml
+  type-aliases-package: com.zq.springcloud.entity
+  configuration:
+    cache-enabled: true
+#eureka相关
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true
+    instance-id: dept-provider-8001
+
+---
+#此为生产环境（prod）的配置
+#和服务器相关，端口号和访问的根路径
+server:
+  port: 8001
+
+#数据源相关配置
+spring:
+  datasource:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud03
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive :20
+    maxWait : 60000
+  #eureka相关配置
+  application:
+    name: microservice-dept-provider
+#mybatis相关
+mybatis:
+  mapper-locations: classpath:mappers/**/*.xml
+  type-aliases-package: com.zq.springcloud.entity
+  configuration:
+    cache-enabled: true
+#eureka相关
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true
+    instance-id: dept-provider-8001
+
