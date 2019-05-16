@@ -9,6 +9,7 @@ server:
 
 #数据源相关配置
 spring:
+  profiles: dev
   datasource:
     driver: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springcloud01
@@ -45,6 +46,7 @@ server:
 
 #数据源相关配置
 spring:
+  profiles: test
   datasource:
     driver: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springcloud02
@@ -81,6 +83,7 @@ server:
 
 #数据源相关配置
 spring:
+  profiles: prod
   datasource:
     driver: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springcloud03
