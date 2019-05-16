@@ -1,7 +1,6 @@
 spring:
-    profiles:
-        active:
-           - dev
+ profiles:
+  active: dev
 ---
 #此部分为开发环境（dev）配置
 spring:

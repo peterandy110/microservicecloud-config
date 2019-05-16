@@ -1,7 +1,6 @@
 spring:
-    profiles:
-        active:
-           - dev
+  profiles:
+  active: dev
 ---
 #此为开发环境（dev）的配置
 #和服务器相关，端口号和访问的根路径
