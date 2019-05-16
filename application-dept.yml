@@ -18,8 +18,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
-    maxActive :20
-    maxWait : 60000
+    maxActive: 20
+    maxWait: 60000
   #eureka相关配置
   application:
     name: microservice-dept-provider
@@ -54,8 +54,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
-    maxActive :20
-    maxWait : 60000
+    maxActive: 20
+    maxWait: 60000
   #eureka相关配置
   application:
     name: microservice-dept-provider
@@ -90,8 +90,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
-    maxActive :20
-    maxWait : 60000
+    maxActive: 20
+    maxWait: 60000
   #eureka相关配置
   application:
     name: microservice-dept-provider
